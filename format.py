@@ -75,6 +75,9 @@ with open(args.file, mode="r", encoding="utf-8") as infile, \
     message_id = 0
 
     for line in tqdm(infile, total=infile_line_count, desc="Processing input file", unit=" line"):
+        if "kept an audio message" in line:
+            continue
+
         line = line.strip()
 
         try:
