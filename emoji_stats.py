@@ -10,9 +10,14 @@ import argparse
 import json
 import os
 
-mpl.rcParams["svg.fonttype"] = "none"
-mpl.rcParams["font.family"] = "sans-serif"
-mpl.rcParams["font.sans-serif"] = ["DejaVu Sans"]
+plt.rcParams.update({
+    "font.size": 16,
+    "font.family": "SF Pro",
+    "svg.fonttype": "none",
+})
+
+font_path = "/home/jet/.local/share/fonts/SF-Pro.ttf"
+sfpro = font_manager.FontProperties(fname=font_path)
 
 emoji_fp = font_manager.FontProperties(
     family="Apple Color Emoji"
