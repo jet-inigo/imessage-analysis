@@ -13,7 +13,7 @@ args = parser.parse_args()
 df = pd.read_csv(args.file)
 
 effects = df["content"].str.extractall(r"Sent with (?P<effect>[\w ]+)")
-#print(effects.value_counts())
+print(effects.value_counts())
 
 tapbacks = df["content"].str.extractall(r"Tapbacks:\n(?P<tapback>\w+) by (?P<name>[^\n]+)")
 print(tapbacks.value_counts())
