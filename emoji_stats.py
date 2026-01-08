@@ -67,8 +67,8 @@ k_counts = [emoji_counts_k[e] for e in emojis]
 
 fig, ax = plt.subplots(figsize=(12, 6))
 
-j_bars = ax.bar(emojis, j_counts, label="J", color="dimgray")
-k_bars = ax.bar(emojis, k_counts, bottom=j_counts, label="K", color="deepskyblue")
+j_bars = ax.bar(emojis, j_counts, label="J", color="#fe942b")
+k_bars = ax.bar(emojis, k_counts, bottom=j_counts, label="K", color="#f150a8")
 ax.bar_label(k_bars, labels=counts, label_type="edge")
 
 ax.tick_params(axis="x", bottom=False)
